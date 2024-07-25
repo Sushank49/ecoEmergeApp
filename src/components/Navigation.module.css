@@ -1,0 +1,12 @@
+.nav {
+ display: flex;
+ justify-content: space-between;
+ padding: 2rem 5rem 2rem 10rem
+}
+
+.ul {
+  list-style: none;
+  font-size: 1.6rem;
+  display: flex;
+  gap: 5rem
+}

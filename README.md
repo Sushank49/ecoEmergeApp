@@ -1,8 +1,20 @@
-# React + Vite
+From EcoEmerge site:
+Articles page
+Add now
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My account / Login Logout
+My articles [liked, comment]
+Most upvoted article / Sort the order newest-Oldest
+Add article / Delete / Modity / Filter words
+User will gain a token if they interact with the article
+Light / Dark mode
+Search Articles
+My profile
+token will be a plant emoji
 
-Currently, two official plugins are available:
+COLORS
+#d8d8d8
+#e3e3e3
+#f5f5f5
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#282828

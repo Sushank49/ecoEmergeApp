@@ -1,20 +1,23 @@
 // React import
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Styles import
-import './index.css'
+import "./index.css";
 
 // Components and Pages Input
-import Homepage from './pages/Homepage'
+import Homepage from "./pages/Homepage";
+import { ArticlesProvider } from "./contexts/ArticlesContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Homepage/>}></Route>
-      </Routes>
-    </BrowserRouter>
-  )
+    <ArticlesProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Homepage />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </ArticlesProvider>
+  );
 }
 
-export default App
+export default App;

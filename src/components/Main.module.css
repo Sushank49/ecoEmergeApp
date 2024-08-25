@@ -1,0 +1,7 @@
+ .main {
+     display: grid;
+     grid-template-columns: .9fr 2.5fr .9fr;
+     margin-top: 2rem;
+
+     
+ }

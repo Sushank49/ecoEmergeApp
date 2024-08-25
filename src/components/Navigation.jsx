@@ -6,9 +6,9 @@ function Navigation() {
   return (
     <nav className={styles.nav}>
       <ul className={styles.ul}>
-        <li><NavLink to='/Home'>Home</NavLink></li>
-        <li><NavLink to='/Home'>Home</NavLink> </li>
-        <li><NavLink to='/Home'>Home</NavLink></li>
+        <li ><NavLink to='/Home' className={styles.link}>Home</NavLink></li>
+        <li ><NavLink to='/Home' className={styles.link}>Home</NavLink> </li>
+        <li ><NavLink to='/Home' className={styles.link}>Home</NavLink></li>
       </ul>
       <ul className={styles.ul}>
         <li>

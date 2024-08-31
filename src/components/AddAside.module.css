@@ -1,0 +1,42 @@
+.aside {
+  margin-top: 6rem;
+  width: 100%;
+  border-left: 1px solid #777;
+  padding: 1rem 2rem;
+  height: 31rem;
+}
+
+.aside__heading {
+  font-size: 3.2rem;
+  color: #acacac;
+}
+
+.aside__list {
+  font-size: 2rem;
+  margin: 2rem 3rem;
+  color: #d8d8d8;
+  line-height: 3rem;
+}
+
+.aside__item {
+  list-style-type: decimal;
+}
+
+.aside__link:link,
+.aside__link:visited {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border: 1px solid #28b485;
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+  color: #d8d8d8;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.aside__link:hover {
+  background-color: #28b485;
+  color: rgb(75, 75, 75);
+}

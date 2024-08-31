@@ -1,0 +1,15 @@
+.post {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #282828;
+  text-align: center;
+}
+
+.headingPrimary {
+  padding-top: 2rem;
+  padding-left: 8rem;
+  font-size: 3.2rem;
+  letter-spacing: 0.3rem;
+  color: #b2f2bb;
+  text-align: center;
+}

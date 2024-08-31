@@ -1,5 +1,65 @@
 .article {
-  height: 10rem;
-  width: 90%;
-  background-color: wheat;
+  height: 16rem;
+  width: 100%;
+  padding: 1rem 0rem 1rem 2rem;
+  border-radius: 3px;
+  transition: all 0.2s;
+  border-bottom: 1px solid #e3e3e3;
+  /* margin-left: 1rem; */
+}
+
+.article:hover {
+  background-color: rgb(75, 75, 75);
+  cursor: pointer;
+}
+
+.title {
+  color: #b2f2bb;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.articleData {
+  color: #e3e3e3;
+  font-size: 1.4rem;
+  margin-top: 2px;
+  letter-spacing: 0.1rem;
+}
+
+.author {
+  margin-right: 5rem;
+}
+
+.content {
+  font-size: 1rem;
+  color: #ebfbee;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.react {
+  margin-top: 1rem;
+  color: #c4c4c4;
+}
+
+.reactNum {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.reactBtn {
+  padding: 0.25rem 0.75rem;
+  margin-left: 3rem;
+  background-color: #282828;
+  border: 1px solid rgb(75, 75, 75);
+  transition: all 0.3s;
+}
+
+.reactBtn:hover {
+  cursor: pointer;
+}
+
+.reactBtn:active {
+  transform: scale(0.86);
 }

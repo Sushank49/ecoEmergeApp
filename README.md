@@ -13,8 +13,12 @@ My profile
 token will be a plant emoji
 
 COLORS
-#d8d8d8
-#e3e3e3
-#f5f5f5
+#939393 tertiary heading
+#acacac secondary heading
+#d8d8d8 Content
+#e3e3e3 Author
+#b2f2bb Title
+#ebfbee
 
 #282828
+rgb(75, 75, 75) hover

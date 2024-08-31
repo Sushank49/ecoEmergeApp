@@ -1,3 +1,37 @@
 .aside {
-  background-color: greenyellow;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.headingSecondary {
+  color: #acacac;
+  font-size: 1.6rem;
+}
+
+.btnCTA:link,
+.btnCTA:visited {
+  border: #ffa33a 2px solid;
+  color: #ffa33a;
+  text-decoration: none;
+  font-size: 1.6rem;
+  display: inline-block !important;
+  border: 2px solid #ffa33a;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  color: #ffa33a;
+  transition: all 0.3s !important;
+}
+
+.btnCTA:hover {
+  background-color: #ffa33a;
+  color: #fff;
+  font-weight: 600;
+}
+
+.subscribe {
+  text-align: center;
+  width: 100%;
+  margin-top: 5rem;
 }

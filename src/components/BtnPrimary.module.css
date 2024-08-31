@@ -1,0 +1,20 @@
+.btnPrimary:link,
+.btnPrimary:visited {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border: 1px solid #28b485;
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+  color: rgb(75, 75, 75);
+  transition: all 0.3s;
+  font-weight: 600;
+  background-color: #28b485;
+}
+
+.btnPrimary:hover {
+  background-color: #282828;
+  color: #d8d8d8;
+  transform: translateY(-3px);
+}

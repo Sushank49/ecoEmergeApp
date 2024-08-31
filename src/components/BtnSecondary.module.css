@@ -1,0 +1,19 @@
+.btnSecondary:link,
+.btnSecondary:visited {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border: 1px solid #28b485;
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+  color: #d8d8d8;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.btnSecondary:hover {
+  background-color: #28b485;
+  transform: translateY(-3px);
+  color: rgb(75, 75, 75);
+}

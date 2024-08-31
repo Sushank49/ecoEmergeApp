@@ -1,8 +1,7 @@
 .sectArticle {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    height: 90vh;
-    width: 100%;
-    background-color: red;
-
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 91vh;
+  border-left: 2px solid rgb(75, 75, 75);
+  width: 100%;
 }

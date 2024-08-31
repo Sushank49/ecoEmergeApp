@@ -1,0 +1,93 @@
+.subscribe {
+  /* Add any styles for the container here if needed */
+}
+
+.form {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  padding: 3rem;
+  text-align: center;
+  background-image: linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.9) 50%,
+      transparent 50%
+    ),
+    url("../../public/img/form.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: top;
+  border-radius: 2px;
+  text-align: left;
+  position: relative;
+}
+
+.form__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  font-size: 4.2rem;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  scale: 1;
+  z-index: 5;
+}
+
+.form__close:hover {
+  cursor: pointer;
+  color: #eee;
+  scale: 1.1;
+}
+
+.form__heading {
+  font-size: 3.6rem;
+  margin-top: -1.5rem;
+  color: #28b485;
+  margin-bottom: 2rem;
+}
+
+.form__label {
+  font-size: 1.2rem;
+  display: block;
+  font-weight: 700;
+  margin-left: 3rem;
+  transition: all 0.3s;
+  margin-top: 0.7rem;
+}
+
+.form__input {
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  border-radius: 3px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-family: inherit;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid transparent;
+}
+
+.form__input:focus {
+  border-bottom: 3px solid #55c57a;
+  outline: none;
+}
+
+.form__input:focus:invalid {
+  border-bottom: 3px solid #e74c3c;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #333;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+.subscribe__btn {
+  /* Add the styles for your button here */
+}

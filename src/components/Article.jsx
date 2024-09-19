@@ -1,8 +1,8 @@
 import styles from "./Article.module.css";
 
-function Article({ article }) {
+function Article({ article, handleClick }) {
   return (
-    <div className={styles.article}>
+    <div className={styles.article} onClick={() => handleClick(article)}>
       <div>
         <h1 className={styles.title}>{article.Title}</h1>
         <div className="tag"></div>

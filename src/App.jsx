@@ -1,5 +1,5 @@
 // React import
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Styles import
 import "./index.css";
@@ -8,6 +8,7 @@ import "./index.css";
 import Homepage from "./pages/Homepage";
 import { ArticlesProvider } from "./contexts/ArticlesContext";
 import Post from "./pages/Post";
+import ArticlePage from "./pages/ArticlePage";
 
 function App() {
   return (
@@ -19,7 +20,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Homepage />}></Route>
-          <Route path="/post" element={<Post />}></Route>
+          <Route path="post" element={<Post />}></Route>
+
+          <Route element={<Navigate to={"/article"} replace />}></Route>
+          <Route path="article/:id" element={<ArticlePage />} />
         </Routes>
       </BrowserRouter>
     </ArticlesProvider>

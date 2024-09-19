@@ -4,7 +4,7 @@ import { useContext } from "react";
 
 // FIREBASE
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyC2lpFzKdz2CJOKzw_1hxHdYdRZ-w3NzU4",
   authDomain: "ecoemerge-a4312.firebaseapp.com",
@@ -14,6 +14,8 @@ const firebaseConfig = {
   appId: "1:94372861119:web:fe88e6e376222eccf4a20a",
   measurementId: "G-2E4H8YWHQK",
 };
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 // Context
 const ArticlesContext = createContext();
@@ -22,12 +24,25 @@ const initialState = {
   articles: null,
   isLoading: false,
   error: "",
+  selectedArticle: {},
 };
 
 function reducer(state, action) {
   switch (action.type) {
     case "articles/loaded":
       return { ...state, articles: action.payload, isLoading: false };
+    case "articles/upload":
+      return {
+        ...state,
+        isLoading: false,
+        articles: [...state.articles, action.payload].reverse(),
+      };
+    case "articles/show":
+      return {
+        ...state,
+        isLoading: false,
+        selectedArticle: action.payload,
+      };
     case "loading":
       return { ...state, isLoading: true };
     default:
@@ -35,16 +50,19 @@ function reducer(state, action) {
   }
 }
 
+// eslint-disable-next-line react/prop-types
 const ArticlesProvider = function ({ children }) {
-  const [{ articles, isLoading }, dispatch] = useReducer(reducer, initialState);
+  const [{ articles, isLoading, selectedArticle }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
 
+  // LOADING ARTICLES
   useEffect(function () {
     async function fetchArticles() {
       dispatch({ type: "loading" });
 
       try {
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
         const data = await getDocs(collection(db, "Articles"));
         const articlesArray = [];
         data.forEach((doc) => {
@@ -58,9 +76,30 @@ const ArticlesProvider = function ({ children }) {
     fetchArticles();
   }, []);
 
+  // CREATING ARTICLE
+  async function createArticle(article) {
+    dispatch({ type: "loading" });
+    await addDoc(collection(db, "Articles"), article);
+    dispatch({ type: "articles/upload", payload: article });
+  }
+
+  // Showing Article Page
+  function showArticle(selectedArticle) {
+    dispatch({ type: "loading" });
+    console.log(selectedArticle);
+    dispatch({ type: "articles/show", payload: selectedArticle });
+  }
+
   return (
-    <ArticlesContext.Provider value={{ articles, isLoading }}>
-      {console.log(articles)}
+    <ArticlesContext.Provider
+      value={{
+        articles,
+        isLoading,
+        createArticle,
+        selectedArticle,
+        showArticle,
+      }}
+    >
       {children}
     </ArticlesContext.Provider>
   );

@@ -32,7 +32,8 @@
 }
 
 .input:focus-visible:placeholder-shown,
-.inputContent:focus-visible {
+.inputContent:focus-visible,
+.input:focus-visible {
   outline: 1px solid #69db7c;
 }
 

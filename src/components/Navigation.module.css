@@ -22,7 +22,7 @@
   box-shadow: none;
   border: 1px solid rgb(75, 75, 75);
   padding: 1rem;
-  position: relative;
+  position: relative !important;
 }
 
 .search:hover .searchInput,
